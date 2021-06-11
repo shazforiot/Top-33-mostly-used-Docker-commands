@@ -1,0 +1,72 @@
+1. Create docker container using Image from Docker Hub
+  docker create -it alpine
+2. How to start the docker container
+  docker start CONTAINER_ID
+3. How to stop a running container
+  docker stop CONTAINER_ID
+4. Deleting a Container
+  docker rm CONTAINER_ID
+5. List docker containers
+  docker ps, docker container ls, docker ps -a,docker container ls -a
+6. How to create a running container
+  docker run -d -it alpine
+7. Creating a named container
+  docker run -d -it --name firstcontainer alpine
+8. Kill a container
+  docker kill CONTAINER_ID
+9. Attaching to the container
+  docker attach CONTAINER_ID
+10. How to run commands inside docker container
+  docker exec -it CONTAINER_ID command
+11. List all docker images
+  docker images
+12. How to remove docker images
+  docker rmi <IMAGE_ID>
+13. Copying Contents between Containers and the host file system
+  docker cp CONTAINER_ID:/file file, docker cp file CONTAINER_ID:/file
+14.  Exposing Ports for Containers
+  docker run --name webserver -p 8080:80 nginx 
+15. Find the changes in container
+  docker diff CONTAINER_ID
+16.  Creating a new Image from Containers
+  docker commit CONTAINER_ID REPOSITORY:TAG
+17.   Add persistent volume to the containers	
+  docker run -d -it -v $(pwd):/var/www nginx
+18.  Monitoring the host for docker containers
+  docker events
+19. Inspecting docker image history
+  docker history IMAGE_ID
+20. Renaming docker container
+  docker rename CONTAINER NEW_NAME
+21. How to restart a docker container
+  docker restart CONTAINER_ID
+22.  How to list all docker networks  
+  docker network ls
+23. Create a docker network
+  docker network create NETWORK_NAME
+24. Get detailed information about network
+  docker network inspect NETWORK_NAME
+25. How to delete a docker network
+  docker network rm NETWORK_NAME
+26. Connect to a docker network
+   docker network connect NETWORK_NAME CONTAINER_ID
+27. Disconnect from a docker network
+   docker network disconnect NETWORK_NAME CONTAINER_ID
+28. How to delete all un-used network
+  docker network prune
+29. How to delete all un-used containers
+  docker container prune
+30. Building docker image from  docker file
+  docker build -t IMAGE_NAME:v1 DOCKERFILE_PATH
+31. Create docker volume
+   docker volume create VOLUME_NAME
+32. Removing docker volume
+  docker volume rm VOLUME_NAME
+33. Deleting container upon exit
+  docker run --rm -it --name deletingcontainer alpine sh
+
+
+
+
+
+
